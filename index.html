@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>IMC</title>
+        <link rel="stylesheet" href="style.css">
+	</head>
+	<script type="text/javascript">
+		function IMC() {
+			var a=document.getElementById('a').value;
+			var p=document.getElementById('p').value;
+			var imc=p/(a/100*a/100);
+			var imco=(imc.toFixed(2));
+
+			document.getElementById("result").innerHTML="Seu IMC é " + imco;
+		}
+	</script>
+	<body>
+		<div>
+			<h2>IMC</h2>
+			<p class="text">Altura</p>
+			<input type="text" id="a">
+			<p class="text">Peso</p>
+			<input type="text" id="p">
+			<p id="result"></p>
+			<button id="btn" onClick="IMC()">Calcular</button>
+			<p id="info">Por favor insira a altura [cm] e peso [kg]</p>
+		</div>
+	</body>
+</html>
